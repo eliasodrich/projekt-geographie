@@ -3,159 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Präsentation: Adolf Lüderitz & Namibia</title>
+    <title>Lüderitz & Namibia | Koloniale Analyse</title>
     <style>
-        /* Dark Mode & Background Setup */
+        /* Minimalist Dark Mode & Glassmorphism */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            background-attachment: fixed;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #0a0a0a; /* Tiefschwarz */
+            color: #e0e0e0;
             display: flex;
             justify-content: center;
-            align-items: center;
             min-height: 100vh;
         }
 
-        /* Glassmorphism Container */
-        .glass-container {
-            width: 90%;
-            max-width: 900px;
-            margin: 2rem;
-            padding: 3rem;
-            background: rgba(255, 255, 255, 0.05); /* Transparenz */
-            backdrop-filter: blur(15px); /* Weichzeichner */
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        .container {
+            width: 95%;
+            max-width: 850px;
+            margin: 40px 20px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
         header {
-            text-align: center;
+            text-align: left;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 2rem;
-            margin-bottom: 2rem;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            color: #ffffff;
             margin: 0;
-            background: linear-gradient(to right, #fff, #bdc3c7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1rem;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         h2 {
-            color: #e67e22;
-            margin-top: 2rem;
-            font-weight: 400;
+            font-size: 1.4rem;
+            color: #c9a050; /* Gedämpftes Gold als einziger Farbakzent */
+            margin-top: 40px;
+            font-weight: 500;
         }
 
         p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+            font-size: 1.05rem;
         }
 
         .highlight {
-            color: #f1c40f;
-            font-weight: bold;
+            color: #ffffff;
+            border-bottom: 1px solid #c9a050;
         }
 
-        /* Platzhalter für Medien */
-        .media-box {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin: 1.5rem 0;
+        /* Karte & Medien */
+        .map-container {
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map-container img {
+            width: 100%;
+            display: block;
+            filter: grayscale(1) brightness(0.8) contrast(1.2); /* Reduziert Farben der Karte */
+        }
+
+        .work-photo-placeholder {
             border: 1px dashed rgba(255, 255, 255, 0.2);
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9rem;
         }
 
         footer {
-            margin-top: 3rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.4);
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #555;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
         }
 
         ul {
-            list-style-type: circle;
-            color: rgba(255, 255, 255, 0.8);
+            padding-left: 20px;
+            color: #888;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="glass-container">
+<div class="container">
     <header>
-        <h1>Koloniale Landnahme in Namibia</h1>
-        <p>Fallstudie: Adolf Lüderitz und die historischen Folgen</p>
+        <h1>Lüderitz & Namibia</h1>
+        <div class="subtitle">Analyse der kolonialen Landnahme</div>
     </header>
 
     <main>
         <section>
-            <h2>Einleitung</h2>
+            <h2>Die historische Basis</h2>
             <p>
-                Die Stadt Lüderitz liegt an der unwirtlichen Atlantikküste Namibias. 
-                Was heute oft als touristisches Ziel dient, hat eine dunkle Geschichte: 
-                Den Beginn des deutschen Kolonialismus in Afrika durch den Landerwerb 1883.
+                Im Jahr 1883 legte der Bremer Kaufmann <span class="highlight">Adolf Lüderitz</span> den Grundstein für die deutsche Kolonialherrschaft in Südwestafrika. Durch den strategischen Kauf der Bucht Angra Pequena begann ein Prozess, der die politische Geographie der Region dauerhaft veränderte.
             </p>
         </section>
 
         <section>
-            <h2>Der betrügerische Landerwerb</h2>
+            <h2>Der Mechanismus des Betrugs</h2>
             <p>
-                Adolf Lüderitz sicherte sich das Gebiet um Angra Pequena durch einen Vertrag mit dem Nama-Kaptein Joseph Frederiks. 
-                Dabei nutzte er den sogenannten <span class="highlight">"Meilen-Betrug"</span> aus: Während Frederiks von englischen Meilen (1,6 km) ausging, 
-                setzte Lüderitz im Vertrag geografische Meilen (7,4 km) ein. 
-                Dies ermöglichte ihm die illegale Aneignung eines Territoriums, das fünfmal größer war als vereinbart.
+                Der berüchtigte <span class="highlight">"Meilen-Betrug"</span> basierte auf der bewussten Verwechslung von Maßeinheiten. Während lokale Führer von englischen Meilen ausgingen, kalkulierte Lüderitz mit geografischen Meilen. Das Ergebnis war eine massive, völkerrechtswidrige Ausweitung des beanspruchten Territoriums.
             </p>
             
-            <div class="media-box">
-                [Hier Karte einfügen: Küste Namibias mit Markierung der Lüderitzbucht]
+            <div class="map-container">
+                <img src="" alt="Minimalistische Weltkarte">
             </div>
         </section>
 
         <section>
-            <h2>Folgen und koloniale Gewalt</h2>
+            <h2>Strukturelle Gewalt & Folgen</h2>
             <p>
-                Dieser Landerwerb bildete den Kern des späteren "Schutzgebietes" Deutsch-Südwestafrika. 
-                Ein besonders düsteres Kapitel ist das Konzentrationslager auf <span class="highlight">Shark Island</span> (1905–1907), 
-                in dem die koloniale Verwaltung unter unmenschlichen Bedingungen tausende Nama und Herero internierte, von denen die meisten starben.
+                Die Landnahme führte direkt zur Etablierung des "Schutzgebietes" und mündete später in der Errichtung des Konzentrationslagers auf <span class="highlight">Shark Island</span>. Diese Geschichte der Enteignung und Gewalt prägt die namibische Gesellschaft sowie die Diskussionen um Restitution und die Umbenennung von Städten (wie !Nami≠Nûs) bis heute.
             </p>
         </section>
 
-        <section>
-            <h2>Fazit & Aktuelle Relevanz</h2>
-            <p>
-                Die Debatte um die Umbenennung der Stadt in <span class="highlight">!Nami≠Nûs</span> zeigt, wie lebendig die 
-                Auseinandersetzung mit diesem Erbe heute ist. Es ist ein zentrales Beispiel für die Aufarbeitung des 
-                Völkermords und die Forderung nach Restitution.
-            </p>
-        </section>
-
-        <div class="media-box">
-            [Hier Foto hochladen, das deine Arbeit an dieser Präsentation zeigt]
+        <div class="work-photo-placeholder">
+            [Hier dein Foto der Projektarbeit hochladen]
         </div>
 
         <footer>
-            <h3>Quellen & Referenzen</h3>
-            <ul>
-                <li>Geographische Rundschau 5-2019: Deutscher Kolonialismus</li>
-                <li>Diercke Weltatlas (Westermann)</li>
-                <li>Arbeitsblatt: Übungen Leitfragen (PDF)</li>
-            </ul>
+            <p>Quellen: Geographische Rundschau 5-2019 | Diercke Weltatlas | Archivdaten 1883</p>
         </footer>
     </main>
 </div>
