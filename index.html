@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adolf Lüderitz & Namibia - Case Study</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e67e22;
+            --light: #ecf0f1;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+            text-align: right;
+        }
+        .lang-btn {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 5px 15px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 { color: var(--secondary); border-bottom: 2px solid var(--light); padding-bottom: 0.5rem; }
+        .map-placeholder {
+            background: #eee;
+            border: 1px dashed #ccc;
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+        .content-en { display: none; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button class="lang-btn" onclick="toggleLanguage()">Switch Language / Sprache wechseln</button>
+</nav>
+
+<header>
+    <h1 id="title">Koloniale Landnahme in Namibia</h1>
+    <p id="subtitle">Fallstudie: Adolf Lüderitz und die Folgen</p>
+</header>
+
+<main>
+    <div id="de-content" class="content-de">
+        <section>
+            <h2>Einleitung</h2>
+            <p>Die Stadt Lüderitz an der kargen Atlantikküste Namibias ist heute ein Ort zwischen kolonialer Nostalgie und schmerzhafter Erinnerung. Alles begann 1883 mit einem folgenschweren Landerwerb durch den Bremer Kaufmann Adolf Lüderitz.</p>
+        </section>
+
+        <section>
+            <h2>Hauptteil: Der "Meilen-Betrug"</h2>
+            <p>Lüderitz erwarb das Gebiet um die Bucht Angra Pequena durch einen Vertrag mit dem Nama-Kaptein Joseph Frederiks. Dabei kam es zum sogenannten „Meilen-Betrug“: Die Nama gingen von englischen Meilen aus, während Lüderitz im Vertrag geografische Meilen (ca. 7,4 km) festschreiben ließ. Dies vergrößerte das Gebiet illegal um das Fünffache.</p>
+            
+            <div class="map-placeholder">
+                [Hier Karte einfügen: Küstenverlauf Namibia mit Markierung Lüderitzbucht]
+            </div>
+
+            <h2>Folgen und Völkermord</h2>
+            <p>Die Landnahme war der Startpunkt für das "Schutzgebiet" Deutsch-Südwestafrika. Ein dunkler Höhepunkt war das Konzentrationslager auf <strong>Shark Island</strong> (1905–1907), in dem tausende Nama und Herero aufgrund der unmenschlichen Bedingungen starben.</p>
+        </section>
+
+        <section>
+            <h2>Fazit & Heute</h2>
+            <p>Heute steht die Umbenennung der Stadt in <strong>!Nami≠Nûs</strong> zur Debatte. Das Erbe von Adolf Lüderitz bleibt ein zentrales Thema der deutsch-namibischen Aufarbeitung und zeigt, wie koloniale Prozesse bis in die Gegenwart wirken.</p>
+        </section>
+    </div>
+
+    <div id="en-content" class="content-en">
+        <section>
+            <h2>Introduction</h2>
+            <p>The town of Lüderitz on Namibia's Atlantic coast is a place caught between colonial nostalgia and painful memory. It all began in 1883 with a consequential land acquisition by the merchant Adolf Lüderitz.</p>
+        </section>
+
+        <section>
+            <h2>Main Part: The "Mile Fraud"</h2>
+            <p>Lüderitz acquired the area around Angra Pequena through a treaty with Nama Captain Joseph Frederiks. This involved the so-called "mile fraud": the Nama assumed English miles, while Lüderitz specified geographical miles (approx. 7.4 km) in the treaty, illegally quintupling the territory.</p>
+            
+            <div class="map-placeholder">
+                [Insert Map: Coastline of Namibia with Lüderitz Bay marked]
+            </div>
+
+            <h2>Consequences and Genocide</h2>
+            <p>This land seizure was the starting point for the "Protectorate" of German South-West Africa. A dark climax was the concentration camp on <strong>Shark Island</strong> (1905–1907), where thousands of Nama and Herero died due to inhumane conditions.</p>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Today, renaming the city to <strong>!Nami≠Nûs</strong> is under debate. Adolf Lüderitz's legacy remains a central theme in German-Namibian reconciliation and demonstrates how colonial processes affect the present.</p>
+        </section>
+    </div>
+
+    <hr>
+    <section>
+        <h3>Quellen / Sources:</h3>
+        <ul>
+            <li>Geographische Rundschau 5-2019: Deutscher Kolonialismus.</li>
+            <li>Diercke Weltatlas, Westermann Verlag.</li>
+            <li>Archivmaterial zum "Meilenbetrug" 1883.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Erstellt für die Präsentation: Geographie - Namibia & Kolonialismus</p>
+</footer>
+
+<script>
+    // Language logic with localStorage
+    function applyLanguage(lang) {
+        const deContent = document.getElementById('de-content');
+        const enContent = document.getElementById('en-content');
+        const title = document.getElementById('title');
+        const subtitle = document.getElementById('subtitle');
+
+        if (lang === 'en') {
+            deContent.style.display = 'none';
+            enContent.style.display = 'block';
+            title.innerText = "Colonial Land Grab in Namibia";
+            subtitle.innerText = "Case Study: Adolf Lüderitz and the Aftermath";
+        } else {
+            deContent.style.display = 'block';
+            enContent.style.display = 'none';
+            title.innerText = "Koloniale Landnahme in Namibia";
+            subtitle.innerText = "Fallstudie: Adolf Lüderitz und die Folgen";
+        }
+    }
+
+    function toggleLanguage() {
+        let currentLang = localStorage.getItem('preferredLang') || 'de';
+        let newLang = (currentLang === 'de') ? 'en' : 'de';
+        localStorage.setItem('preferredLang', newLang);
+        applyLanguage(newLang);
+    }
+
+    // Initial check on load
+    window.onload = () => {
+        const savedLang = localStorage.getItem('preferredLang') || 'de';
+        applyLanguage(savedLang);
+    };
+</script>
+
+</body>
+</html>
