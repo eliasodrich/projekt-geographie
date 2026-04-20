@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lüderitz & Namibia | Koloniale Analyse</title>
     <style>
-        /* Minimalist Dark Mode & Glassmorphism */
+        /* Ultra-Minimalist Dark Mode & Glassmorphism */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: #0a0a0a; /* Tiefschwarz */
-            color: #e0e0e0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #050505; /* Nahezu Schwarz */
+            color: #d1d1d1;
             display: flex;
             justify-content: center;
             min-height: 100vh;
@@ -19,95 +19,101 @@
 
         .container {
             width: 95%;
-            max-width: 850px;
-            margin: 40px 20px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 60px 20px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 4px; /* Eckigeres, technisches Design */
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
         }
 
         header {
             text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         h1 {
-            font-size: 2.2rem;
-            letter-spacing: -0.02em;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.03em;
             color: #ffffff;
             margin: 0;
         }
 
         .subtitle {
-            color: #888;
-            font-size: 1rem;
-            margin-top: 8px;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 12px;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.2em;
         }
 
         h2 {
-            font-size: 1.4rem;
-            color: #c9a050; /* Gedämpftes Gold als einziger Farbakzent */
-            margin-top: 40px;
-            font-weight: 500;
+            font-size: 1.2rem;
+            color: #c9a050; /* Gedämpfter Gold-Akzent */
+            margin-top: 60px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         p {
-            line-height: 1.8;
-            color: #b0b0b0;
-            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #a0a0a0;
+            font-size: 1.1rem;
+            font-weight: 300;
         }
 
         .highlight {
             color: #ffffff;
-            border-bottom: 1px solid #c9a050;
+            font-weight: 400;
         }
 
-        /* Karte & Medien */
-        .map-container {
-            margin: 30px 0;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Bild-Integration */
+        .image-section {
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
         }
 
-        .map-container img {
+        .image-section img {
             width: 100%;
             display: block;
-            filter: grayscale(1) brightness(0.8) contrast(1.2); /* Reduziert Farben der Karte */
+            filter: grayscale(0.4) brightness(0.7) contrast(1.1);
+            transition: filter 0.5s ease;
         }
 
-        .work-photo-placeholder {
-            border: 1px dashed rgba(255, 255, 255, 0.2);
-            padding: 40px;
-            text-align: center;
-            margin-top: 50px;
-            color: #666;
-            font-size: 0.9rem;
+        .image-section img:hover {
+            filter: grayscale(0) brightness(0.9);
+        }
+
+        .image-caption {
+            font-size: 0.8rem;
+            color: #444;
+            margin-top: 10px;
+            text-align: right;
         }
 
         footer {
-            margin-top: 60px;
-            font-size: 0.85rem;
-            color: #555;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 20px;
+            margin-top: 80px;
+            font-size: 0.8rem;
+            color: #333;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 30px;
         }
 
         ul {
-            padding-left: 20px;
-            color: #888;
+            padding-left: 0;
+            list-style: none;
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
     </style>
 </head>
@@ -128,29 +134,33 @@
         </section>
 
         <section>
+            <div class="image-section">
+                <img src="https://www.voyemo.com/wp-content/uploads/2020/05/Namibia-13-main.jpg" alt="Namibia Küstenlandschaft">
+            </div>
+            <div class="image-caption">Küstenlandschaft bei Lüderitz, Namibia</div>
+        </section>
+
+        <section>
             <h2>Der Mechanismus des Betrugs</h2>
             <p>
                 Der berüchtigte <span class="highlight">"Meilen-Betrug"</span> basierte auf der bewussten Verwechslung von Maßeinheiten. Während lokale Führer von englischen Meilen ausgingen, kalkulierte Lüderitz mit geografischen Meilen. Das Ergebnis war eine massive, völkerrechtswidrige Ausweitung des beanspruchten Territoriums.
             </p>
-            
-            <div class="map-container">
-                <img src="" alt="Minimalistische Weltkarte">
-            </div>
         </section>
 
         <section>
             <h2>Strukturelle Gewalt & Folgen</h2>
             <p>
-                Die Landnahme führte direkt zur Etablierung des "Schutzgebietes" und mündete später in der Errichtung des Konzentrationslagers auf <span class="highlight">Shark Island</span>. Diese Geschichte der Enteignung und Gewalt prägt die namibische Gesellschaft sowie die Diskussionen um Restitution und die Umbenennung von Städten (wie !Nami≠Nûs) bis heute.
+                Die Landnahme mündete später in der Errichtung des Konzentrationslagers auf <span class="highlight">Shark Island</span>. Diese Geschichte der Enteignung prägt die namibische Gesellschaft sowie die Diskussionen um Restitution und die Umbenennung von Städten wie <span class="highlight">!Nami≠Nûs</span> bis heute.
             </p>
         </section>
 
-        <div class="work-photo-placeholder">
-            [Hier dein Foto der Projektarbeit hochladen]
-        </div>
-
         <footer>
-            <p>Quellen: Geographische Rundschau 5-2019 | Diercke Weltatlas | Archivdaten 1883</p>
+            <p>QUELLEN / REFERENZEN</p>
+            <ul>
+                <li>Geographische Rundschau 5-2019</li>
+                <li>Diercke Weltatlas (Sek I/II)</li>
+                <li>Arbeitsblatt: Übungen Leitfragen</li>
+            </ul>
         </footer>
     </main>
 </div>
